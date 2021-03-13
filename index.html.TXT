@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="style.css">
+<head>
+
+<title>Simple Interest Calculator</title>
+
+</head>
+
+<body id="background">
+  <script src="script.js"></script>
+  <h2 style="text-align: center; color:black; font-family: Helvetica">Simple Interest Calculator</h2><h5 style="text-align: center; color:black; font-family: Helvetica; padding: 0px"><b>SIC</b></h5>
+  
+  <div id="centerdiv">
+  <form id="formBackground">
+    
+    <div class="theinputs">Amount: <input type="number" id="amount" placeholder="$ Money amount $" name="amount" class="theboxes"/></div>
+    
+    <br> 
+    
+    <div class="theinputs">Interest rate:   <input type="number" id="number" placeholder="Interest from 1-100" class="theboxes"/> </div>
+    
+    <br>
+    
+    <div class="theinputs">No. of years: <input type="number" id="Numberofyears" name="Numberofyears" placeholder="Years to receive $" class="theboxes"/>
+ 
+      <br>
+      <br>
+      <br>
+      
+      <input type="button" value="Compute interest" id="submitrn" onclick="result()"/>
+       </form>
+    <p class="theinputs">The Interest will be : <br>
+<span id = "result"></span>
+</p>
+    </div>
+</body>
+</html>
