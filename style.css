@@ -1,15 +1,27 @@
-#background{
-  background-color: white;
+
+.body{
+    background-color:black;
+    font-family:arial;
+    color:white;
+}
+h1{
+    color:#D3D3D3;
+    font-family:verdana;
 }
 
-#formBackground{
+
+
+.maindiv{
   text-align: center;
- background-color: lightblue;
+ background-color: white;
  border-radius: 15px 50px;
-  padding: 90px;
-  width: 200px;
-  height: 300px;
+  padding: 20px;
+  width: 300px;
+  height: 1000px;
+  color:black;
+  border-radius: 25px;
 }
+
 #centerdiv{
   position: fixed;
   top: 60%;
