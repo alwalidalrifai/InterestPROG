@@ -1,41 +1,49 @@
 <!DOCTYPE html>
+
 <html>
+
 <link rel="stylesheet" href="style.css">
+
 <head>
+<title>Simple Interest Calculator</title>
+</head> 
 
-<title>Web App - Simple Interest Calculator</title>
+<body class="body">
 
-</head>
-
-<body id="background">
- <div class="maindiv">
+<div class="maindiv">
+  
   <script src="script.js"></script>
-  <h2 style="text-align: center; color:black; font-family: Helvetica">Simple Interest Calculator</h2><h5 style="text-align: center; color:black; font-family: Helvetica; padding: 0px"><b>SIC</b></h5>
+
+  <h1 style="text-align: center; color:black; font-family: Helvetica">Simple Interest Calculator</h1>
+  <h5 style="text-align: center; color:black; font-family: Helvetica; padding: 0px"><b>SIC</b></h5>
   
   
-  <form id="formBackground">
-    
-    <div class="theinputs">Amount: <input type="number" id="amount" placeholder="$ Money amount $" name="amount" class="theboxes"/></div>
-    
-    <br> 
-    
-    <div class="theinputs">Interest rate:   <input type="range" id="number" placeholder="Interest from 1-20" min="1" max="20" step="0.25" value="10.25" class="theboxes"/> <span>"10.25%"</span></div>
-    
-    <br>
-    
-    <div class="theinputs">No. of years: <input type="number" id="Numberofyears" name="Numberofyears" placeholder="Years to receive $" class="theboxes"/>
- 
+ <form>
+
+    <div class="theinputs">Amount: <input type="number" id="amount" placeholder="$ Money amount $" name="amount" class="theboxes" onsubmit="return validateForm()"></div>
+       <br> 
+    <div class="theinputs">Interest rate: <br>  1%<input type="range" name="number" id="number" min="1" max="20" step="0.25" value="10.25" onchange="show_value(this.value);">20% 
+        <br><span id="slider_value" style="color:red;"></span></div>
+       
+        <br>
+    <div class="theinputs">No. of years: <input type="number" id="Numberofyears" name="Numberofyears" placeholder="1-10" class="theboxes" min="1" max="10"></div>
+      
       <br>
       <br>
       <br>
       
       <input type="button" value="Compute Interest" id="submitrn" onclick="result()"/>
-       </form>
-     <p class="theinputs">The Interest will be : <br>
+</form>
+
+     <p class="theinputs">The Interest will be : 
+         <br>
      <span id = "result"></span>
      </p>
-    </div>
-</div>
+
     <footer><span>&#169;</span>Everyone Can Get Rich</footer>
+
+</div>
+
 </body>
+
 </html>
