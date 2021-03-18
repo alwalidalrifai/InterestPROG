@@ -1,57 +1,25 @@
-function updateSliderValue(){
-    let rateSlider = document.getElementById("rate");
-    let currentSliderRate = document.getElementById("currentRate");
-    currentSliderRate.innerHTML = `${rateSlider.value}%`;
-    rateSlider.onchange= function (){
-        
-        currentSliderRate.innerHTML = `${rateSlider.value}%`;
-    };
-}
-updateSliderValue();
+/*This function is made to create the result and alert for negative or zero Amount of money*/
+function result(){
+var amount = document.getElementById("amount").value;
+var number = document.getElementById("number").value;
+var Numberofyears = document.getElementById("Numberofyears").value;
 
-function compute()
-{
-   let rate = document.getElementById("rate").value;
-   let principal= document.getElementById("principal").value;
-   let years = document.getElementById("years").value;
-  
-   let isValidData = checkdata();
-   if(isValidData){
-    let d= new Date();
-    let year = d.getFullYear()+ Number(years);
-    let interest = Number(principal) * Number(years)*Number(rate)/100;
-    let computedAmount = Number(principal) + interest;
-    let output=`<p>If you deposit <mark>${principal}</mark> at an interest rate of <mark>${rate}</mark>,\n 
-    you will receive an amount of <mark>${computedAmount}</mark>, in the year <mark>${year}</mark></p>`;
-   // console.log("total amount after "+ years +" years is: "+computedAmount);
-    //console.log("output:"+output);
-    document.getElementById("result").innerHTML= output;
-   }
-    
-}
-
-const checkdata= ()=>{
-    const amount= document.getElementById("principal");
-    const years = document.getElementById("years");
-   
-   // console.log("amount: "+amount.value +", years value:"+years.value +", interest rate:"+rate.value);
-    //Check if amount field is empty , 0 or negative
-    if(amount.value == ""){
-        alert("Please enter an amount");
-        amount.focus();
-        return false;
-    }else if(amount.value <= 0){        
-            alert("Please enter a positive number");
-            amount.focus();
-            return false;
-    }
-    //Check if years field is empty
-    if(years.value == ""){
-    alert("Please enter a number of years");
-    years.focus();
+if (amount <= 0) {
+    alert("Enter a Positive value");
     return false;
-    }
-    //If all is well return true.
-    alert("Form validation is successful."+"\nYou entered the amount: "+amount.value +", years value:"+years.value +" and interest rate:"+rate.value);
-    return true;
+  }
+document.getElementById("result").innerHTML = (amount*(number/100)*Numberofyears);
 }
+
+/*Simple function made for the range slider for interest rate*/
+function show_value(x)
+{
+ slider_value = document.getElementById("slider_value").innerHTML=x+"%";
+}
+
+/*For auto focus*/
+function focusOnMyInputBox(){         
+    document.getElementById("amount").focus();
+}
+
+
